@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/desertandmoon"
+    tools:context="com.ehsanmokhtari.brainchallenger.YesOrNo">
+
+    <TextView
+        android:id="@+id/yONCurrentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:background="#3e504949"
+        android:text="0 + 0 = 0"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yONSecondTextView" />
+
+    <TextView
+        android:id="@+id/yONScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#dc6efe"
+        android:padding="3dp"
+        android:text="0/0"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yONCurrentTextView">
+
+        <Button
+            android:id="@+id/yONChooseNo"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="#f93264"
+            android:onClick="yONChoose"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:tag="0"
+            android:text="نه"
+            android:textSize="75sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/yONChooseYes"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="#8cd64c"
+            android:onClick="yONChoose"
+            android:tag="1"
+            android:text="آره"
+            android:textSize="75sp"
+            android:visibility="invisible" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/yONSituationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="28sp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/yONSecondTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yONThirdTextView" />
+
+    <TextView
+        android:id="@+id/yONThirdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yONScoreTextView" />
+
+    <TextView
+        android:id="@+id/yONTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#68e975"
+        android:padding="3dp"
+        android:text="60s"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <GridLayout
+        android:id="@+id/yONLevelGridLayout"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="193dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/yONStartImageView"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:onClick="yONStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yONCurrentTextView"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+
+        <ImageButton
+            android:id="@+id/yONStartMedImageView"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:onClick="yONStartMed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yONCurrentTextView"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <ImageButton
+            android:id="@+id/yONStartHardImageView"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_row="2"
+            android:onClick="yONStartHard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yONCurrentTextView"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
