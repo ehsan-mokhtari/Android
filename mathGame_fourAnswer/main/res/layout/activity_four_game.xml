@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nightmoon"
+    tools:context="com.ehsanmokhtari.brainchallenger.FourGame">
+
+    <TextView
+        android:id="@+id/fGoperationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#50e76c"
+        android:padding="4dp"
+        android:text="0 + 0"
+        android:textSize="35sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fGScoreTextView" />
+
+    <TextView
+        android:id="@+id/fGScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:text="0/0"
+        android:textColor="#d4fffefe"
+        android:textSize="28sp"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fGTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:text="60s"
+        android:textColor="#d4fffefe"
+        android:textSize="28sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/fGGridLayout"
+        android:layout_width="260dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906">
+
+        <Button
+            android:id="@+id/fGButton0"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="#e86ffd"
+            android:onClick="fGChoose"
+            android:tag="0"
+            android:text="0"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/fGButton1"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="#b6e486"
+            android:onClick="fGChoose"
+            android:tag="1"
+            android:text="0"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/fGButton2"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="#89dbf6"
+            android:onClick="fGChoose"
+            android:tag="2"
+            android:text="0"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/fGButton3"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="#fed189"
+            android:onClick="fGChoose"
+            android:tag="3"
+            android:text="0"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/fGSituationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:text=""
+        android:textColor="@android:color/background_light"
+        android:textSize="27sp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fGoperationTextView" />
+
+    <GridLayout
+        android:id="@+id/fGStartGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <ImageButton
+            android:id="@+id/fGStartImageButton"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:onClick="fGStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/fGStartMediumImageButton"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="fGMedStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/fGStartHardImageButton"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:onClick="fGHardStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
