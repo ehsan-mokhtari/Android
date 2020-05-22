@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Brain Challenger</string>
+    <string name="title_activity_find_the_number">FindTheNumber</string>
+</resources>
